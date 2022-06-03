@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="title-1">Choos a template</h2>
+      </div>
+
+      <div class="modal__content">
+        <!-- cards-wrapper -->
+
+        <div class="cards-wrapper">
+          <!-- Выбираем одинаковые название кнопок,
+            что бы можно было выбрать только одну -->
+          <input class="radio-select" id="card-1" type="radio" name="card" />
+
+          <!-- Подключаем input к label при помощи for -->
+          <label for="card-1" class="card">
+            <div class="card__header">
+              <img
+                class="card__img"
+                src="./images/calendar-days-solid.svg"
+                alt="calendar"
+              />
+            </div>
+            <div class="card__body">
+              <h2 class="card__title">First option</h2>
+              <p>Description for this option</p>
+            </div>
+          </label>
+
+          <!-- Выбираем одинаковые название кнопок,
+            что бы можно было выбрать только одну -->
+          <input class="radio-select" id="card-2" type="radio" name="card" />
+
+          <!-- Подключаем input к label при помощи for -->
+          <label for="card-2" class="card">
+            <div class="card__header">
+              <img
+                class="card__img"
+                src="./images/users-solid.svg"
+                alt="team"
+              />
+            </div>
+            <div class="card__body">
+              <h2 class="card__title">Second option</h2>
+              <p>Description for this option</p>
+            </div>
+          </label>
+        </div>
+        <!-- /cards-wrapper -->
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+          dolores necessitatibus nemo dignissimos excepturi numquam distinctio
+          suscipit nobis nisi harum, nihil debitis ea vitae ipsam cupiditate,
+          temporibus tempore totam, cum laborum sapiente eligendi libero saepe!
+          Inventore, aliquam. Obcaecati facere sunt exercitationem officia vero
+          voluptates enim illum id inventore at, assumenda ex provident numquam
+          minima dignissimos ea mollitia, blanditiis laboriosam dolorum. Quidem
+          eligendi soluta praesentium aperiam iure laudantium eveniet qui
+          facere.
+        </p>
+      </div>
+
+      <div class="modal__footer">
+        <div class="buttons-row">
+          <button class="modal__footer-btn modal__footer-btn--primary">
+            Do it!
+          </button>
+          <button class="modal__footer-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

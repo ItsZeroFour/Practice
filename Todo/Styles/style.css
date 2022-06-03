@@ -1,0 +1,94 @@
+body {
+  background-color: #f2f1ee;
+  font-family: sans-serif;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.important {
+  font-weight: bold;
+  color: #ff0004;
+}
+
+.todo_list {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 40px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: rgb(23, 23, 23);
+  font-size: 30px;
+}
+
+.create_new_todo {
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 376px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(232, 216, 216);
+  font-size: 18px;
+}
+
+button {
+  margin-top: 10px;
+  width: 400px;
+  padding: 10px;
+  cursor: pointer;
+
+  background-color: rgb(255, 157, 0);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 18px;
+
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: rgb(231, 142, 0);
+}
+
+.todo {
+  padding-left: 0;
+}
+.todo li {
+  padding: 1em;
+  list-style-type: none;
+}
+.todo li:not(:last-child) {
+  border-bottom: 1px solid rgba(231, 142, 0, 0.459);
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+.wrapper {
+  font-size: 25px;
+  user-select: none;
+  /* Что бы текст не выходил за пределы блока */
+  word-wrap: break-word;
+}

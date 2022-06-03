@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  transition: all .3s;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex-colors {
+  text-align: center;
+}
+
+.hex-colors h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  animation: colorchange 5s infinite alternate;
+}
+
+.hex-colors h2 {
+  font-size: 2rem;
+  margin-top: 15%;
+}
+
+@keyframes colorchange {
+  0% {
+    color: indigo;
+  }
+
+  20% {
+    color: blue;
+  }
+
+  40% {
+    color: green;
+  }
+
+  60% {
+    color: yellow;
+  }
+
+  80% {
+    color: orange;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+
+/* 
+=
+==-------------
+Button
+==-------------
+=
+*/
+
+button {
+  position: relative;
+  border: none;
+  padding: 20px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 210px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+button span {
+  position: relative;
+  color: #fff;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+}
+
+button .btn {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 210px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+button .btn::after,
+button .btn::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+button .btn::before {
+  
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+button .btn::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+button:hover .btn{
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .hex-colors h1 {
+    font-size: 1.5rem;
+  }
+
+  .hex-colors h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 5px;
+  background-color: #fafafa;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #087cdb;
+  border: none;
+  transition: .3s all;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0f6fbd;
+  color: #011f38;
+}
+
+.product-items {
+  display: flex;
+  gap: 5px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  border: none;
+  background: transparent;
+  font-family: sans-serif;
+  color: gray;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.card-tab::after {
+  content: attr(data-goods-count);    /*Изменение количества товаров в корзине*/
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 15px;
+  background-color: red;
+  color: #fff;
+}
+
+.card-tab:hover {
+  color: #7a7a7a;
+}
+
+.tab:hover {
+  color: #1771b9;
+}
+
+.tab:focus {
+  color: #1771b9
+}
+
+.product-item {
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #7a7a7a;
+  border-radius: 5px;
+  background: white;
+  font-family: sans-serif;
+  transition: .3s ease;
+  overflow: hidden;
+}
+
+.product-item img {
+  display: flex;
+  justify-content: space-around;
+  display: block;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 10px;
+}
+
+.product-list {
+  background: #fafafa;
+  padding: 15px 0;
+}
+
+.product-list h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #444444;
+  margin: 0 0 10px 0;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cart__item-price {
+  font-weight: bold;
+}

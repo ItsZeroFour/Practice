@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  background-color: rgb(235, 235, 235);
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.md-4 {
+  font-size: 50px;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 80px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  background-color: #ff8c00;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.2s all;
+}
+
+.btn:hover {
+  color: #ff8c00;
+  background-color: #fff;
+}
+
+.card {
+  border: 1px solid rgb(255, 153, 0);
+  background-color: #e87f00;
+  max-width: 500px;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 8%;
+  padding: 10px;
+  font-size: 18px;
+  position: absolute;
+  margin-left: 340px;
+}
+
+
+.accordion__inner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
+
+.list-group-item {
+  padding: 15px;
+  border: 1px solid #e87f00;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #ff8c00;
+  color: #fff;
+}
+
+.list-goup-item {
+  border: 1px solid #ff8c00;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 0 0 20px 10px;
+}
+
+
+.list-group {
+  display: flex;
+}
+
+.list-group-item-2 {
+  width: 100px;
+  text-align: center;
+  border-radius: 3%;
+}
+
+.tabs-title {
+  border-bottom: 1px solid #ff8c00;
+  max-width: 200px;
+}
+
+.card-2 {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  border-bottom: 2px solid #e87f00;
+}
+
+
+.content-hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+.fade-block {
+  height: 100vh;
+  background-color: #bf700f;
+}

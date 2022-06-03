@@ -1,0 +1,81 @@
+* {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.site-header {
+    border:  1px solid #c0c0c0;
+    padding: 10px;
+    /* overflow: hidden; */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.site-header h1 {
+    font-size: 4rem;
+    position: relative;
+    display: inline-block;
+    color: blueviolet;
+}
+
+.site-header-bg {
+    background: url(https://media.istockphoto.com/photos/new-year-loading-picture-id1282500581?b=1&k=20&m=1282500581&s=170667a&w=0&h=XE1zFbNNgbvxYnt4DEBCaCKOyWSFBW_hSLThgfd6uFs=);
+    background-position-x: 130%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Создание анимации */
+    animation-name: header-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-animation {
+    0% {
+        background-position-y: -30%;
+    }
+    100% {
+        background-position-y: 100%;
+    }
+}
+
+.snowman {
+    width: 90px;
+    height: 245px;
+    position: absolute;
+    background-image: url(./img/snowman.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 200px;
+    top: 100px;
+    cursor: pointer;
+}
+
+.snowman-animation {
+    animation-name: snowman-animation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes snowman-animation {
+    0% {
+        top: -300%;
+    }
+    60% {
+        top: -85px;
+    }
+    70% {
+        top: 130px;
+    }
+    80% {
+        top: -100px;
+    }
+    100% {
+        top: -115px;
+    }
+}

@@ -1,0 +1,194 @@
+.modal {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 660px;
+
+  // Выравниваем элементы в колонку (header вверху, footer внизу)
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 680px) {
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    width: auto;
+  }
+
+  &__header,
+  &__footer {
+    height: 90px;
+    padding: 10px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    overflow-y: auto; // Делаем скролл, если контента много
+    padding: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__content p + p {
+    // em - от размера шрифта
+    margin-top: 1em;
+  }
+}
+
+.title-1 {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.title-1 + * {
+  margin-top: 15px;
+}
+
+.modal__footer {
+  &-btn {
+    padding: 10px 40px;
+
+    border-radius: 4px;
+    border: 1px solid #c1c1c1;
+    background-color: #fff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+
+    &--primary {
+      color: #fff;
+      background-color: #4486fb;
+      border-color: transparent;
+
+      &:hover {
+        background-color: #44a4fb;
+      }
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding: 10px 20px;
+  }
+}
+
+.buttons-row {
+  display: flex;
+}
+
+.buttons-row > .modal__footer-btn + .modal__footer-btn {
+  margin-left: 20px;
+}
+
+// Card
+.card {
+  width: 200px;
+
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+  background-color: #fff;
+
+  color: #000;
+  text-align: center;
+
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in;
+
+  &__header {
+    padding: 4px 10px;
+    height: 55px;
+    border-bottom: 1px solid #c1c1c1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    padding: 20px 35px;
+  }
+}
+
+.card {
+  margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &__body {
+    padding: 20px 35px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.2;
+      text-align: center;
+      color: #000;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: #000;
+
+    /* Если есть абзац после заголовка, то будет отступ */
+    & + * {
+      margin-top: 7px;
+    }
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.cards-wrapper > * {
+  // Перенос на следующую строчку
+  flex-shrink: 0;
+}
+
+.radio-select {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  /* Выносим за пределы экрана,
+   что бы небыло отступов */
+  position: absolute;
+  margin-left: -1000px;
+  // Что бы не отображалась
+  appearance: none;
+
+  &:checked + .card,
+  &:checked + .card .card__header {
+    border-color: #4486fb;
+  }
+}

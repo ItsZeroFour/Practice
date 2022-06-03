@@ -1,0 +1,86 @@
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.buttons {
+    display: grid;
+    /* Выстраиваем все кнопки в ряд */
+    grid-template-areas: 
+        "ac plus-minus percent division"
+        "seven eight nine multi"
+        "four five six minus"
+        "one two three plus"
+        /* Пишем 2 раза "zero", что бы оно занимало 2 ячейки */
+        "zero zero dot equal";
+    /* Отступ между кнопками */
+    grid-gap: 7px;
+    /* Выравнивание по центру */
+    justify-items: center;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    /* Выравниваем по центру */
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5em;
+    cursor: pointer;
+    /* Невозможность копирования текста */
+    user-select: none;
+    transition: all .1s;
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+}
+
+.btn:hover {
+    /* При наведении будет увеличиватся яркость */
+    filter: brightness(120%);
+}
+
+.btn:active {
+    /* При нажатии уменьшается яркость */
+    filter:  brightness(90%);
+}
+
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501;
+}
+
+
+/* =Screen= */
+
+
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
